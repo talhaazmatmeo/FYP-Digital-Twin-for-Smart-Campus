@@ -1,0 +1,17 @@
+@"
+node_modules/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.local
+*.log
+unity-digital-twin/[Ll]ibrary/
+unity-digital-twin/[Tt]emp/
+unity-digital-twin/[Oo]bj/
+unity-digital-twin/*.csproj
+unity-digital-twin/*.unityproj
+unity-digital-twin/*.sln
+unity-digital-twin/*.suo
+"@ | Set-Content -Path ".gitignore" -Encoding UTF8
