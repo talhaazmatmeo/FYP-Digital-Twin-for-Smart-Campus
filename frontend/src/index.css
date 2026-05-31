@@ -1,0 +1,153 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Typography hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: inherit;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+/* Main dashboard container */
+.dashboard-container {
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  background: transparent;
+  display: block;
+}
+
+/* MUI Card enhancements */
+.MuiCard-root {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: none;
+  border: 1px solid var(--cardBorder);
+  background: var(--card);
+}
+
+.MuiCard-root:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Status card styling */
+.status-card .MuiCardContent-root {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.status-card .MuiTypography-h3 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+}
+.status-card .MuiTypography-body2 {
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Icons in status cards */
+.status-card .MuiSvgIcon-root {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+/* Chart card */
+.chart-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.chart-card .MuiCardContent-root {
+  padding: 1.5rem;
+}
+
+/* Recharts improvements */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: var(--cardBorder);
+}
+
+.recharts-text {
+  fill: var(--muted);
+  font-size: 12px;
+}
+
+.recharts-legend-item-text {
+  color: var(--muted);
+}
+
+/* Alert banner */
+.MuiAlert-root {
+  border-radius: 8px;
+  box-shadow: none;
+  border: 1px solid var(--cardBorder);
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+  .dashboard-container {
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .status-card .MuiTypography-h3 {
+    font-size: 2.2rem;
+  }
+
+  .status-card .MuiSvgIcon-root {
+    font-size: 2.8rem;
+  }
+}
+
+/* Code (if needed later) */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  background: #f0f2f5;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}

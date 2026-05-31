@@ -1,0 +1,18 @@
+Run these from repo root (PowerShell), in this order:
+
+Activate venv (optional if you use full python path):
+(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& Activate.ps1)
+
+Install backend deps (first time / after changes):
+python -m pip install -r .\backend\requirements.txt
+
+Start backend (Terminal 1):
+python .\backend\run.py
+Opens API on http://127.0.0.1:5000
+
+Install frontend deps (first time / after changes) (Terminal 2):
+npm --prefix .\frontend install
+
+Start dashboard (Terminal 2):
+npm --prefix .\frontend run dev
+Opens UI on http://localhost:5173/

@@ -1,17 +1,54 @@
-@"
+# ----------------------------
+# Node / Frontend
+# ----------------------------
 node_modules/
-venv/
+dist/
+dist-ssr/
+
+# ----------------------------
+# Python / Backend
+# ----------------------------
 __pycache__/
-*.pyc
-.DS_Store
+*.py[cod]
+*.pyd
+*.pyo
+*.so
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Dotenv (do not commit secrets)
 .env
-.env.local
+.env.*
+!.env.example
+
+# SQLite / local data
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
 *.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ----------------------------
+# Unity (generated files)
+# ----------------------------
 unity-digital-twin/[Ll]ibrary/
 unity-digital-twin/[Tt]emp/
 unity-digital-twin/[Oo]bj/
+unity-digital-twin/[Bb]uild/
+unity-digital-twin/[Bb]uilds/
+unity-digital-twin/Logs/
 unity-digital-twin/*.csproj
 unity-digital-twin/*.unityproj
 unity-digital-twin/*.sln
 unity-digital-twin/*.suo
-"@ | Set-Content -Path ".gitignore" -Encoding UTF8
